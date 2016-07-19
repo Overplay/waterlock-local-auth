@@ -74,3 +74,7 @@ If you want to take advantage of the built in reset itself have the page you sen
 You can customize the email template used in the password reset via the template file defined in `config/waterlock.js` this template file is rendered with the fun and dynamic `jade` markup, the view var `url` is generated and passed to it when a user requests and password reset. You can customize this template to your liking and pass any other view vars you wish to it via the `vars` options in the js file.
 
 Your user can simply try to login to `/login` if the user is not found one will be created using [waterlines](https://github.com/balderdashy/waterline) `findOrCreate` method
+
+
+## Validate User
+An HTTP `GET` to `/auth/validate` will invoke the validation process and send the user an email to validate from. 
